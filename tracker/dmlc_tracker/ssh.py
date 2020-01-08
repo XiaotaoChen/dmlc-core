@@ -26,6 +26,8 @@ def get_env(pass_envs):
     # get system envs
     keys = ['OMP_NUM_THREADS', 'KMP_AFFINITY', 'LD_LIBRARY_PATH', 'AWS_ACCESS_KEY_ID',
             'AWS_SECRET_ACCESS_KEY', 'DMLC_INTERFACE']
+    # added by cxt
+    keys += ["PATH", "LD_LIBRARY_PATH", "PYTHONPATH"]
     for k in keys:
         v = os.getenv(k)
         if v is not None:
